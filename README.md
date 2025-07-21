@@ -81,8 +81,10 @@ JOIN top_scores ts
 ORDER BY fs.test_score DESC;
 
 ```
+### Result of the top Query:
+![alt text](image.png)
 
-And i filter the data even more to see the total_scholarships
+And i filter the data even more to see the total_scholarships with destination country
 
 ```sql
 SELECT 
@@ -93,3 +95,5 @@ WHERE scholarship_received = TRUE
 GROUP BY destination_country
 ORDER BY total_scholarship_students DESC;
 ```
+### Result is this:
+![alt text](image-1.png)
