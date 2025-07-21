@@ -138,5 +138,5 @@ And at last i looked at the number of scholarships students and checked where th
 
 ## Key Insights:
 
-- South Africa students are moving alot to their destination country
+- South Africa students are moving alot to their destination country Russia
 - South Africa as origin_country has highest scholarships
