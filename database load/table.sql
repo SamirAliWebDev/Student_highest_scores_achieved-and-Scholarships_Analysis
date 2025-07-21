@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS student_migration_4
+
 CREATE TABLE student_migration_4 (
     student_id VARCHAR(20) PRIMARY KEY,                
     origin_country VARCHAR(100),
