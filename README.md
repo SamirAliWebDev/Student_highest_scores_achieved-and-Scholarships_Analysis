@@ -97,3 +97,46 @@ ORDER BY total_scholarship_students DESC;
 ```
 ### Result is this:
 ![alt text](image-1.png)
+
+i Used the jupyter notebook for Visualization 
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+df = pd.read_csv('D:\.MY PERSONAL DATA/programming Practice/Data Analytics/Real Dataset Practice/global_student_migration/Code of the project/Results Gathered/Students achieved destination country.csv')
+
+
+df = df.dropna(subset=['origin_country', 'destination_country'])
+
+# Count students per origin country
+origin_counts = df['origin_country'].value_counts().reset_index()
+origin_counts.columns = ['origin_country', 'student_count']
+
+# Plot bar chart
+plt.figure(figsize=(12, 6))
+sns.barplot(data=origin_counts, x='origin_country', y='student_count',hue='origin_country' ,palette='viridis')
+
+plt.title('Scholarship Students by Origin Country')
+plt.xlabel('Origin Country')
+plt.ylabel('Number of Students')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.grid(axis='y')
+plt.show()
+```
+
+### Graph is this:
+![Scholarship Graph](Results%20Gathered/graphs/Graphs/output.png)
+
+And at last i looked at the number of scholarships students and checked where they went from origin_country to destination_country
+
+### Graph is this:
+![Scholarship Graph](Results%20Gathered/graphs/Graphs/nnumber%20of%20scholarships%20students.png)
+
+
+
+## Key Insights:
+
+- South Africa students are moving alot to their destination country
+- South Africa as origin_country has highest scholarships
